@@ -1,0 +1,14 @@
+[Unit]
+Description=Sondaku Dice Bot for Discord
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/sikenn
+ExecStart=/home/ubuntu/sikenn/.venv/bin/python -m bot.main
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
